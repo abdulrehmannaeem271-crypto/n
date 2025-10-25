@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple Notepad — Brainstorm Academy</title>
+  <style>
+    :root{--bg:#f7f7f9;--card:#fff;--text:#111;--muted:#666}
+    [data-theme="dark"]{--bg:#0f1720;--card:#0b1220;--text:#e6eef8;--muted:#9fb0ce}
+    *{box-sizing:border-box;font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial}
+    body{margin:0;background:var(--bg);color:var(--text);padding:18px}
+    .wrap{max-width:900px;margin:0 auto}
+    header{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+    h1{font-size:20px;margin:0}
+    .controls{margin-left:auto;display:flex;gap:8px;align-items:center}
+    button,select,input[type=range]{background:var(--card);border:1px solid rgba(0,0,0,0.06);padding:8px;border-radius:8px}
+    button:hover{cursor:pointer;opacity:0.95}
+    .card{background:var(--card);padding:12px;border-radius:12px;box-shadow:0 2px 8px rgba(2,6,23,0.06);}
+    textarea{width:100%;height:58vh;resize:vertical;border:1px solid rgba(0,0,0,0.06);padding:12px;border-radius:8px;font-size:15px;line-height:1.45;background:transparent;color:var(--text)}
+    footer{display:flex;justify-content:space-between;gap:12px;margin-top:8px;align-items:center}
+    .small{font-size:13px;color:var(--muted)}
+    @media(max-width:640px){header{flex-wrap:wrap}.controls{width:100%;justify-content:space-between}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>Simple Notepad — Brainstorm Academy</h1>
+        <div class="small">Write, save, load, and download notes — very simple for students.</div>
+      </div>
+
+      <div class="controls">
+        <label class="small">Font size
+          <input id="fontsize" type="range" min="12" max="30" value="15" title="Font size" />
+        </label>
+        <button id="saveBtn" title="Save to browser storage">Save</button>
+        <button id="loadBtn" title="Load from browser storage">Load</button>
+        <button id="clearBtn" title="Clear note">Clear</button>
+        <button id="downloadBtn" title="Download as .txt">Download</button>
+        <button id="themeBtn" title="Toggle dark/light">Dark</button>
+      </div>
+    </header>
+
+    <main class="card">
+      <textarea i
